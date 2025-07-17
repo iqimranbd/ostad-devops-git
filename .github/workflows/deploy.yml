@@ -1,0 +1,15 @@
+name: Show hello.txt content
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Display hello.txt content
+        run: cat hello.txt
